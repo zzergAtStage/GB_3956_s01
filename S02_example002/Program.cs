@@ -1,6 +1,6 @@
 ﻿
 Console.WriteLine("Input day of the week:");
-String sA = Console.ReadLine();
+String sA = Console.ReadLine()!;
   int a = Convert.ToInt32(sA);
 switch (a)
 {
@@ -24,6 +24,8 @@ switch (a)
     break;
   case 7:
     Console.WriteLine("Sunday");
-    default:
+    break;
+  default:
     Console.WriteLine("Inpit another day");
+    break;
 }

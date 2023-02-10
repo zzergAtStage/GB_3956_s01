@@ -1,9 +1,9 @@
 ﻿int count = 0;
 while (count < 4) {
     Console.WriteLine("Введите число 1");
-    String sA =  Console.ReadLine();
+    String sA =  Console.ReadLine()!;
     Console.WriteLine("Введите число 2");
-    String sB =  Console.ReadLine();
+    String sB =  Console.ReadLine()!;
 
   int a = Convert.ToInt32(sA);
   int b = Convert.ToInt32(sB);
