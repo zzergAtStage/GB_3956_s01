@@ -5,14 +5,13 @@ int rightValue = Convert.ToInt32(Console.ReadLine());
 //declare an array and put there numbers
 List<int> iArr = new List<int>();
 //strarting from one
-int iNum = 1, iCnt = 1;
+int iCnt = 1;
 while (iCnt < rightValue)
 {
     iCnt++;
     if (iCnt % 2 == 0)
     {
         iArr.Add(iCnt);
-        iNum++;
     }
 }
 Console.WriteLine("Even numbers are: " + string.Join(",",iArr));
