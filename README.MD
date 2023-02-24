@@ -15,3 +15,12 @@
 * Задача №19 - S03_3956_HW19
 * Задача №21 - S03_3596_HWadd/task021
 * Задача №23 - S03_3596_HWadd/task023
+
+## Homework seminar 04 (self checking)
+## Homework seminar 05
+Знания:
+  * korteje (int, int)
+  * средний элемент массива = array.length % 2 == 0   - четное количесиво.
+   * Середина будет array.length % 2  
+    * array.length % 2 != 0 - не четное количесиво.  
+    * Середина будет array.length % 2 + 1    
