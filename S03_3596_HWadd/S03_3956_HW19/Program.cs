@@ -9,7 +9,7 @@
 // предварительно разобрав на целочисленный массив методом деления десятичным остатком - дорого и больше кода!
 //Алгорим 2: Не используя массив сравнивать LastNum == CurrNum двигаясь навстречу с двух сторон числа. 
 //*учесть что всегда 5-ти значное числов
-class Program
+class S03_3596_HW19
 {
     public static bool ifDebug = false;
     static bool checkPolindrom(int param1)
@@ -32,7 +32,7 @@ class Program
     public static void Main(string[] args)
     {
         Console.Clear();
-        Program.ifDebug = false;
+        S03_3596_HW19.ifDebug = false;
         Console.Write("Input checked for polindromic value: ");
         int param = Convert.ToInt32(Console.ReadLine());
         if ((param % 10000) != 0)
