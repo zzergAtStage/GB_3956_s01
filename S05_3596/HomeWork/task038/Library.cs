@@ -1,8 +1,4 @@
-﻿// заполненный случайными числами из промежутка [-9, 9]. 
-// Найдите сумму отрицательных и положительных элементов массива.
-// Например, в массиве [3,9,-8,1,0,-7,2,-1,8,-3,-1,6] 
-// сумма положительных чисел равна 29, сумма отрицательных равна -20.
-namespace HomeWork;
+﻿namespace HomeWork;
 
 public class Library
 {
@@ -57,7 +53,7 @@ public class Library
             if (array[i] < min) {
                 min = array[i];
                 minIndex = i;
-                Console.WriteLine($" minIndex = {minIndex}; i={i}; min={min}");
+               // Console.WriteLine($" minIndex = {minIndex}; i={i}; min={min}");
             }
         }
         return minIndex;
@@ -70,7 +66,7 @@ public class Library
             if (array[i] > max) {
                 max = array[i];
                 maxIndex = i;
-                Console.WriteLine($" maxIndex = {maxIndex}; i={i}; max={max}");
+               // Console.WriteLine($" maxIndex = {maxIndex}; i={i}; max={max}");
             }
         }
         return maxIndex;

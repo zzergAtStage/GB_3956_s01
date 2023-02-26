@@ -1,4 +1,5 @@
-﻿namespace HomeWork;
+﻿
+namespace HomeWork;
 
 class task038
 {
@@ -13,23 +14,8 @@ class task038
         int maxIndex = HomeWork.Library.GetIndexOfMaximalArrayMember(arr);
         HomeWork.Library.PrintArray(arr);
         Console.WriteLine($"Debug: minIndex={minIndex}; maxIndex={maxIndex}");
-        //проверим, что левый индекс не больше правого
-        bool reverseCalculation = false;
-        double sum = 0;
-        if (minIndex > maxIndex) reverseCalculation = true;
-        if (reverseCalculation)
-        {
-            Console.WriteLine("WARNING! <-- reverseCalculation! <--");
-            for (int i = maxIndex; i <= minIndex; i--)
-            {
-                sum += arr[i];
-            }
-        } else {
-            for (int i = minIndex; i <= maxIndex; i++)
-            {
-                sum += arr[i];
-            }
-        }
-        Console.WriteLine($" -> {sum}");
+       
+        double diff = arr[maxIndex] - arr[minIndex];
+        Console.WriteLine($" -> {diff} ({arr[maxIndex]} - {arr[minIndex]} )");
     }
 }
