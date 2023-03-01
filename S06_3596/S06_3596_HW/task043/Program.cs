@@ -29,8 +29,11 @@ class Program
         //(k1 - k2)*x = b2 - b1
         //x = (b2-b1)/ (k1 - k2)
         Console.Clear();
-        double b1 = 2, k1 = 5, b2 = 4, k2 = 9;
-        
+        //double b1 = 2, k1 = 5, b2 = 4, k2 = 9;
+        double b1 = Library.GetNumberD($"Input b1");
+        double k1 = Library.GetNumberD($"Input k1");
+        double b2 = Library.GetNumberD($"Input b2");
+        double k2 = Library.GetNumberD($"Input k2");
         if ((b2 == 0 && b1 == 0) || (k1 == k2))
         {
             System.Console.WriteLine("Straight lineы are parallel!");
