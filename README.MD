@@ -35,6 +35,7 @@
 * задача №29 -  [task029](./S04_3596_HW/task029/Program.cs)
 
 </details>
+
 <details>
 <summary> Homework seminar 05 </summary>
 
@@ -52,3 +53,21 @@
 
 **Функции описаны в Library.cs**
 </details>
+
+<details>
+<summary>Home work for seminar 06 </summary>
+
+**knowledgment** 
+* Хранение ссылок на объект и на значение в коде C#
+* Использование библиотек и классов
+
+**Solutions** 
+* Задача 041 [task041](./S06_3596/S06_3596_HW/task041/lask041.cs)
+* Задача от преподавателя [extraTask](./S06_3596/S06_3596_HW/taskExtra/ExtraTask.cs)
+* Задача 043 [task043](./S06_3596/S06_3596_HW/task043/Program.cs)
+
+*f(x)* -вынесены в библиотеку, в основном
+</details>
+
+
+
