@@ -82,20 +82,21 @@ public class Library
     }
     //reverse array
     public static int[] ReverseArray(int[] array)
-    {   
+    {
         int tmp = 0;
-        
+
         for (int i = 0; i < array.Length / 2; i++)
         {
             tmp = array[i];
-            array[i] = array[array.Length-i-1];
-            array[array.Length-i-1] = tmp;
-           
+            array[i] = array[array.Length - i - 1];
+            array[array.Length - i - 1] = tmp;
+
         }
         return array;
 
     }
-    public static string GetBinaryFromInt(int value,  string arrS = ""){
+    public static string GetBinaryFromInt(int value, string arrS = "")
+    {
         //Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
         // 45 -> 101101
         // 3  -> 11
@@ -106,8 +107,39 @@ public class Library
         int temp = value / 2;
         arrS = arrS + " " + rest.ToString();
         System.Console.WriteLine(arrS);
-               arrS = GetBinaryFromInt(temp,arrS);
+        arrS = GetBinaryFromInt(temp, arrS);
         return arrS;
     }
+    //ınput of integer array with fix dimention
+    public static int[] GetArrayWithFixSize(int size, string prompt = "")
+    {
+        int[] inputArray = new int[size];
+        Console.WriteLine($"{prompt}:");
+        for (int i = 0; i < size; i++)
+        {
+            Console.WriteLine($"  Input number #{i + 1}: ");
+            inputArray[i] = int.Parse(Console.ReadLine());
+        }
+        return inputArray;
+    }
 
+    //input one integer with prompt
+    public static int GetNumber(string prompt = "")
+    {
+        System.Console.WriteLine($"{prompt}: ");
+        int number = int.Parse(Console.ReadLine());
+        return number;
+    }
+    public static string GetNumberS(string prompt = "")
+    {
+        System.Console.WriteLine($"{prompt}: ");
+        string numberS = Console.ReadLine();
+        return numberS;
+    }
+    public static double GetNumberD(string prompt = "")
+    {
+        System.Console.WriteLine($"{prompt}: ");
+        double numberD = double.Parse(Console.ReadLine());
+        return numberD;
+    }
 }
