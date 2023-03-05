@@ -5,11 +5,31 @@ public class Library
 
     public static double[] GetRandomRealArray(int length, double leftRange, double rigthRange)
     {
+        /*
+        become a length of one=dimentions array of double with the range of generating elements
+        */
         double[] arr = new double[length];
         for (int i = 0; i < length; i++)
         {
             arr[i] = Math.Round((Random.Shared.NextDouble() * (rigthRange - leftRange) + leftRange), 2);
         }
+
+        return arr;
+    }
+    public static double[,] GetRandomRealArray(int length, int height, double leftRange, double rightRange)
+    {   
+        /*
+        become a length of matrix array of double with the range of generating elements
+
+        */
+        double[,] arr = new double[length,height];
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                arr[i,j] = Math.Round((Random.Shared.NextDouble() * (rightRange - leftRange) + leftRange), 2);
+            }
+           }
 
         return arr;
     }
@@ -49,7 +69,17 @@ public class Library
     {
         Console.WriteLine($"[{String.Join(", ", array)}]");
     }
-
+    public static void PrintArray(double[,] array){
+        System.Console.WriteLine($"Showing the array[{array.GetLength(0)},{array.GetLength(1)}]");
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            System.Console.WriteLine();
+            for (int j = 0; j < array.GetLength(1); j++)
+            {
+                System.Console.Write($"{array[i,j]} ");
+            }
+        }
+    }
     public static int GetIndexOfMinimalArrayMember(double[] array)
     {
         double min = array[0];

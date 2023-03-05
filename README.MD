@@ -57,7 +57,7 @@
 <details>
 <summary>Home work for seminar 06 </summary>
 
-**knowledgment** 
+**knowledged** 
 * Хранение ссылок на объект и на значение в коде C#
 * Использование библиотек и классов
 
@@ -69,5 +69,11 @@
 *f(x)* -вынесены в библиотеку, в основном
 </details>
 
+<details>
+<summary>Homework for seminar 07</summary>
 
+**knowledged**
+
+* Задача 047 [task047](./S07_3596/S07_3596_HW/task046/task047.cs)
+</details>
 
