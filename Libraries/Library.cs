@@ -17,19 +17,19 @@ public class Library
         return arr;
     }
     public static double[,] GetRandomRealArray(int length, int height, double leftRange, double rightRange)
-    {   
+    {
         /*
         become a length of matrix array of double with the range of generating elements
 
         */
-        double[,] arr = new double[length,height];
+        double[,] arr = new double[length, height];
         for (int i = 0; i < length; i++)
         {
             for (int j = 0; j < height; j++)
             {
-                arr[i,j] = Math.Round((Random.Shared.NextDouble() * (rightRange - leftRange) + leftRange), 2);
+                arr[i, j] = Math.Round((Random.Shared.NextDouble() * (rightRange - leftRange) + leftRange), 2);
             }
-           }
+        }
 
         return arr;
     }
@@ -39,6 +39,20 @@ public class Library
         for (int i = 0; i < length; i++)
         {
             arr[i] = Random.Shared.Next(leftRange, rigthRange);
+        }
+
+        return arr;
+    }
+
+    public static int[,] GetRandomArray(int length, int height, int leftRange, int rigthRange)
+    {
+        int[,] arr = new int[length, height];
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+            for (int j = 0; j < arr.GetLength(1); j++)
+            {
+                arr[i, j] = Random.Shared.Next(leftRange, rigthRange);
+            }
         }
 
         return arr;
@@ -69,17 +83,31 @@ public class Library
     {
         Console.WriteLine($"[{String.Join(", ", array)}]");
     }
-    public static void PrintArray(double[,] array){
-        System.Console.WriteLine($"Showing the array[{array.GetLength(0)},{array.GetLength(1)}]");
-        for (int i = 0; i < array.GetLength(0); i++)
+    public static void PrintArray<T>(T[,] arr)
+    {
+        for (int i = 0; i < arr.GetLength(0); i++)
         {
-            System.Console.WriteLine();
-            for (int j = 0; j < array.GetLength(1); j++)
+            for (int j = 0; j < arr.GetLength(1); j++)
             {
-                System.Console.Write($"{array[i,j]} ");
+                Type elementType = arr[i, j].GetType();
+
+                if (elementType == typeof(int))
+                {
+                    Console.Write("{0,4}", arr[i, j]);
+                }
+                else if (elementType == typeof(string))
+                {
+                    Console.Write("{0,-20}", arr[i, j]);
+                }
+                else if (elementType == typeof(double))
+                {
+                    Console.Write("{0,8:F2}", arr[i, j]);
+                }
             }
+            Console.WriteLine();
         }
     }
+
     public static int GetIndexOfMinimalArrayMember(double[] array)
     {
         double min = array[0];

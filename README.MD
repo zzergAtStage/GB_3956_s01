@@ -75,5 +75,7 @@
 **knowledged**
 
 * Задача 047 [task047](./S07_3596/S07_3596_HW/task046/task047.cs)
+* Задача 050 [task050](./S07_3596/S07_3596_HW/task050/task050/Program.cs)
+* Задача 052 [task052](./S07_3596/S07_3596_HW/task052/Program.cs)
 </details>
 
