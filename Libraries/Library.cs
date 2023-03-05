@@ -83,6 +83,11 @@ public class Library
     {
         Console.WriteLine($"[{String.Join(", ", array)}]");
     }
+    /// <summary>
+    /// Print array with different types of data
+    /// </summary>
+    /// <param name="arr">Incoming array of objects (two dimensions) </param>
+    /// <typeparam name="T">Type of data</typeparam>
     public static void PrintArray<T>(T[,] arr)
     {
         for (int i = 0; i < arr.GetLength(0); i++)

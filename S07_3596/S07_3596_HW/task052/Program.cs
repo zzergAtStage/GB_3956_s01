@@ -40,6 +40,7 @@ class Program
             // {8,4,2,4}
             // };
         Library.PrintArray(squareMatrix);
+        
         System.Console.WriteLine("Average numbers of columns are:");
         System.Console.WriteLine(GetArithmeticalOfCol(squareMatrix));
 
