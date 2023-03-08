@@ -1,36 +1,39 @@
 ﻿using Libraries;
 namespace task058;
 class Program
-{ //Задача 54: Задайте двумерный массив. Напишите программу, 
-  //которая упорядочит по возрастанию элементы каждой строки двумерного массива.
+{ //Задача 58: Задайте две матрицы. Напишите программу, 
+  //которая будет находить произведение двух матриц.
 
     static void Main(string[] args)
     {
         Console.Clear();
         int leftRange = 1;
         int rightRange = 10;
-        int countRows = Library.GetNumber("Input rows count = ");
-        int countColumns = Library.GetNumber("Input columns count = ");
-        int[,] arrayToSortRows = Library.GetRandomArray(countRows, countColumns,leftRange,rightRange);
+        int sideSize = Library.GetNumber("Input size of matrix = ");
 
-        Library.PrintArray(arrayToSortRows);
-        SortIntegerArray(arrayToSortRows);
-        Library.PrintArray(arrayToSortRows);
+        int[,] arrayFirst = Library.GetRandomArray(sideSize, sideSize, leftRange, rightRange);
+        int[,] arraySecond = Library.GetRandomArray(sideSize, sideSize, leftRange, rightRange);
+        Library.PrintArray(arrayFirst);
+        Library.PrintArray(arraySecond);
+        int[,] resultArray = Multiplay(ref arrayFirst, ref arraySecond);
+        Library.PrintArray(resultArray);
     }
 
-    static void SortIntegerArray(int[,] array){
-        //sorting by rows
-        for (int i = 0; i < array.GetLength(0); i++) //rows
+    static int[,] Multiplay(ref int[,] pArrayFirst, ref int[,] pArraySecond)
+    {
+        int sideSize = pArrayFirst.GetLength(0);
+        int[,] resultArray = new int[sideSize, sideSize];
+
+        for (int i = 0; i < sideSize; i++)
         {
-            int maxArrayMember = array[i,0];
-            for (int j = 1; j < array.GetLength(1); j++)
+            for (int j = 0; j < sideSize; j++)
             {
-                if (maxArrayMember > array[i,j]){
-                    array[i,j-1] = array[i,j];
-                    array[i,j] = maxArrayMember;
-                }
-            }            
-        }
+                resultArray[i, j] = pArrayFirst[i, j] * pArraySecond[i, j];
+            }
 
+        }
+        return resultArray;
     }
+
+
 }

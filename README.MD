@@ -88,6 +88,9 @@
 **Tasks**
 
 * Задача 054 [task054](./S08_3596/task054/Program.cs)  
+* Задача 056 [task056](./S08_3596/task056/Program.cs)
+* Задача 058 [task058](./S08_3596/task058/Program.cs)
+* Задача 060 [task060](./S08_3596/task060/Program.cs)
 
 
 </details>
