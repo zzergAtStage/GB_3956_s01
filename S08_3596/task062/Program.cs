@@ -3,33 +3,69 @@ namespace task062;
 class Program
 {
     static int count = 0;
-    static int arraySize = 4;
+    static int arraySize = 7;
+    const int RIGHT = 0;
+    const int DOWN = 1;
+    const int LEFT = 2;
+    const int UP = 3;
+    static int leftFilled;
+    static int bottomFilled;
+    static int topFilled;
+    static int rightFilled;
     static void Main(string[] args)
     {
         Console.Clear();
         int[,] spinArray = new int[arraySize, arraySize];
         //using a recursion to fill array with spin
-        MazeFillingArray(String.Empty,0, 0, spinArray);
+
+        rightFilled = spinArray.GetLength(1) - 1;
+        leftFilled = 0;
+        bottomFilled = spinArray.GetLength(0) - 1;
+        topFilled = 0;
+        MazeFillingArray(RIGHT, 0, 0, spinArray);
         Library.PrintArray(spinArray);
     }
 
-    static void MazeFillingArray(string stageDebug, int row, int col, int[,] maze)
+    static void MazeFillingArray(int direction, int row, int col, int[,] maze)
     {
-        if ((row <= (maze.GetLength(0) - 1) && col <= (maze.GetLength(1) - 1))
-            && row >= 0 && col >= 0
-        && maze[row, col] == 0)
+        //System.Console.WriteLine($"direction:{direction}; row:{row}; col:{col}");
+        while (topFilled <= bottomFilled && leftFilled <= rightFilled)
         {
-            maze[row, col] = ++count;
-            // Console.SetCursorPosition(row,col);
-            // Console.Write($" {maze[row, col]} ");
-            // Console.ReadKey();
-            System.Console.WriteLine($"{stageDebug}=> count={count}; row={row}; col={col} ");
-            MazeFillingArray("1",row, col + 1, maze);
-            MazeFillingArray("2",row + 1, col, maze);
-            MazeFillingArray("3",row, col - 1, maze);
-            MazeFillingArray("4",row - 1, col, maze);
+            switch (direction)
+            {
+                case RIGHT:
+                    for (int i = leftFilled; i <= rightFilled; i++)
+                    {
+                        maze[topFilled, i] = ++count;
 
-
+                    }
+                    topFilled++;
+                    break;
+                case DOWN:
+                    for (int i = topFilled; i <= bottomFilled; i++)
+                    {
+                        maze[i, rightFilled] = ++count;
+                    }
+                    rightFilled--;
+                    break;
+                case LEFT:
+                    for (int i = rightFilled; i >= leftFilled; i--)
+                    {
+                        maze[bottomFilled, i] = ++count;
+                    }
+                    bottomFilled--;
+                    break;
+                case UP:
+                    for (int i = bottomFilled; i >= topFilled; i--)
+                    {
+                        maze[i, leftFilled] = ++count;
+                    }
+                    leftFilled++;
+                    break;
+            }
+            direction = (direction + 1) % arraySize;
         }
+
     }
+
 }
