@@ -79,3 +79,15 @@
 * Задача 052 [task052](./S07_3596/S07_3596_HW/task052/Program.cs)
 </details>
 
+<details>
+<summary>Homework for seminar 08</summary>
+
+**knowledged**
+
+
+**Tasks**
+
+* Задача 054 [task054](./S08_3596/task054/Program.cs)  
+
+
+</details>

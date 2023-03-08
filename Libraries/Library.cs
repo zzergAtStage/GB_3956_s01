@@ -2,7 +2,8 @@
 
 public class Library
 {
-
+    const int defaultLeftRange = 1;
+    const int defaultRightRange = 10;
     public static double[] GetRandomRealArray(int length, double leftRange, double rigthRange)
     {
         /*
@@ -33,25 +34,29 @@ public class Library
 
         return arr;
     }
-    public static int[] GetRandomArray(int length, int leftRange, int rigthRange)
+    public static int[] GetRandomArray(int length
+                            , int leftRange = defaultLeftRange
+                            , int rightRange = defaultRightRange)
     {
         int[] arr = new int[length];
         for (int i = 0; i < length; i++)
         {
-            arr[i] = Random.Shared.Next(leftRange, rigthRange);
+            arr[i] = Random.Shared.Next(leftRange, rightRange);
         }
 
         return arr;
     }
 
-    public static int[,] GetRandomArray(int length, int height, int leftRange, int rigthRange)
+    public static int[,] GetRandomArray(int length, int height
+                                    , int leftRange = defaultLeftRange
+                                    , int rightRange = defaultRightRange)
     {
         int[,] arr = new int[length, height];
         for (int i = 0; i < arr.GetLength(0); i++)
         {
             for (int j = 0; j < arr.GetLength(1); j++)
             {
-                arr[i, j] = Random.Shared.Next(leftRange, rigthRange);
+                arr[i, j] = Random.Shared.Next(leftRange, rightRange);
             }
         }
 
@@ -111,6 +116,7 @@ public class Library
             }
             Console.WriteLine();
         }
+         Console.WriteLine();
     }
 
     public static int GetIndexOfMinimalArrayMember(double[] array)
@@ -189,13 +195,13 @@ public class Library
     //input one integer with prompt
     public static int GetNumber(string prompt = "")
     {
-        System.Console.WriteLine($"{prompt}: ");
+        System.Console.Write($"{prompt}: ");
         int number = int.Parse(Console.ReadLine());
         return number;
     }
     public static string GetNumberS(string prompt = "")
     {
-        System.Console.WriteLine($"{prompt}: ");
+        System.Console.Write($"{prompt}: ");
         string numberS = Console.ReadLine();
         return numberS;
     }
