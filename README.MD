@@ -95,3 +95,15 @@
 
 
 </details>
+
+## Seminar 09 Recursion
+
+
+<details>
+<summary>Задание 63</summary>
+Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+N = 5 -> "1, 2, 3, 4, 5"
+N = 6 -> "1, 2, 3, 4, 5, 6"
+<p>Задача 063 <a href="./S09_Final_Project/task063/Program.cs" title="task063">
+task063.Program.sc</a>.</p>
+</details>
