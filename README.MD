@@ -107,3 +107,11 @@ N = 6 -> "1, 2, 3, 4, 5, 6"
 <p>Задача 063 <a href="./S09_Final_Project/task063/Program.cs" title="task063">
 task063.Program.sc</a>.</p>
 </details>
+
+<details>
+<summary>Задание 65</summary>
+Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+M = 1; N = 5 -> "1, 2, 3, 4, 5"
+M = 4; N = 8 -> "4, 5, 6, 7, 8"
+<p> <a href="./S09_Final_Project/task065/Program.cs" title="task065"> task65.Prorgam.sc </a></p>
+</details>
