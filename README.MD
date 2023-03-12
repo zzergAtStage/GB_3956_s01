@@ -115,3 +115,51 @@ M = 1; N = 5 -> "1, 2, 3, 4, 5"
 M = 4; N = 8 -> "4, 5, 6, 7, 8"
 <p> <a href="./S09_Final_Project/task065/Program.cs" title="task065"> task65.Prorgam.sc </a></p>
 </details>
+
+
+<details>
+<summary>Задание 67</summary>
+Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+453 -> 12
+45 -> 9
+<p>Ссылка на решение <a href="./S09_Final_Project/task067/Program.cs" title="task067"> task67.Prorgam.sc </a></p>
+</details>
+
+
+<details>
+<summary>Задание 69</summary>
+Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+A = 3; B = 5 -> 243 (3⁵)<br>
+A = 2; B = 3 -> 8
+<p> Решение задачи: <a href="./S09_Final_Project/task069/Program.cs" title="task069"> task69.Prorgam.sc </a></p>
+</details>
+
+
+## HomeWork ***Final project***
+
+
+<details>
+<summary>Задача 64</summary>
+Задача 64: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от N до 1.
+N = 5 -> "5, 4, 3, 2, 1"
+N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
+<p>Решение <a href="./S09_Final_Project/task64/Program.cs" title="task64"> task64.Prorgam.sc </a></p>
+</details>
+
+
+<details>
+<summary>Задача 66</summary>
+Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
+M = 1; N = 15 -> 120
+M = 4; N = 8. -> 30
+<p>Решение <a href="./S09_Final_Project/task066/Program.cs" title="task066"> task066.Prorgam.sc </a></p>
+</details>
+
+
+
+<details>
+<summary>Задача 68</summary>
+Задача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.<br>
+m = 2, n = 3 -> A(m,n) = 9
+<p>Решение <a href="./S09_Final_Project/task068/Program.cs" title="task068"> task068.Prorgam.sc </a></p>
+</details>
